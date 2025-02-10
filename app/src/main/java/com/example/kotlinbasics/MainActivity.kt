@@ -3,6 +3,7 @@ package com.example.kotlinbasics
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Typeface
+import android.net.Uri
 import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.Toast
@@ -16,6 +17,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.kotlinbasics.databinding.ActivityMainBinding
 import com.example.kotlinbasics.databinding.CustomDialogBinding
+import com.example.kotlinbasics.fragment.OtpFragment
+import com.google.android.material.snackbar.Snackbar
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -27,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
             insets
         }
         Toast.makeText(this,"On create ",Toast.LENGTH_SHORT).show()
@@ -98,7 +102,19 @@ class MainActivity : AppCompatActivity() {
             customWindow?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT)
             customWindow?.setBackgroundDrawable(AppCompatResources.getDrawable(this,R.drawable.custom_dialog_bg))
         }
+
+        binding.btnSnackBar.setOnClickListener {
+            Snackbar.make(it,"SnackBar Showing..",Snackbar.LENGTH_LONG)
+                .setAction("DISMISS",{
+                    //
+                })
+                .show()
+        }
+        binding.btnGenerateOtp.setOnClickListener {
+            startActivity(Intent(this,ActOtpGenerate::class.java))
+        }
     }
+
 
     override fun onStart() {
         super.onStart()

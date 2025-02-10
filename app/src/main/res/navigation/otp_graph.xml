@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/otp_graph"
+    app:startDestination="@id/otpFragment">
+
+    <fragment
+        android:id="@+id/fragEmailIntent"
+        android:name="com.example.kotlinbasics.fragment.FragEmailIntent"
+        android:label="fragment_frag_email_intent"
+        tools:layout="@layout/fragment_frag_email_intent" />
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.example.kotlinbasics.fragment.OtpFragment"
+        android:label="fragment_otp"
+        tools:layout="@layout/fragment_otp" >
+        <action
+            android:id="@+id/action_otpFragment_to_fragEmailIntent"
+            app:destination="@id/fragEmailIntent"
+            app:popUpTo="@id/otpFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
