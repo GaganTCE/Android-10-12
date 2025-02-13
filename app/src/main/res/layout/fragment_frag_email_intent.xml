@@ -23,14 +23,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/tilNum2"
         app:layout_constraintTop_toBottomOf="@id/tvMain">
+
         <EditText
             android:id="@+id/et1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="0"
-            android:maxLength="1"
             android:inputType="number"
-            />
+            android:maxLength="1"
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilNum2"
@@ -40,13 +40,14 @@
         app:layout_constraintEnd_toStartOf="@id/tilNum3"
         app:layout_constraintStart_toEndOf="@id/tilNum1"
         app:layout_constraintTop_toBottomOf="@id/tvMain">
+
         <EditText
             android:id="@+id/et2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="0"
+            android:inputType="number"
             android:maxLength="1"
-            android:inputType="number"/>
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilNum3"
@@ -56,12 +57,14 @@
         app:layout_constraintEnd_toStartOf="@id/tilNum4"
         app:layout_constraintTop_toBottomOf="@id/tvMain"
         app:layout_constraintStart_toEndOf="@id/tilNum2">
+
         <EditText
+            android:id="@+id/et3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="0"
+            android:inputType="number"
             android:maxLength="1"
-            android:inputType="number"/>
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"
@@ -71,12 +74,25 @@
         app:layout_constraintStart_toEndOf="@id/tilNum3"
         app:layout_constraintTop_toBottomOf="@id/tvMain"
         app:layout_constraintEnd_toEndOf="parent">
+
         <EditText
+            android:id="@+id/et4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="0"
             android:inputType="number"
-            android:maxLength="1"/>
+            android:maxLength="1"
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tilNum1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"
+        android:text="Check"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

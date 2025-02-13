@@ -13,6 +13,7 @@
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
             app:destination="@id/secondFragment"
+            app:enterAnim="@android:anim/slide_in_left"
             app:popUpTo="@id/firstFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -24,6 +25,7 @@
         <action
             android:id="@+id/action_secondFragment_to_firstFragment"
             app:destination="@id/firstFragment"
+            app:enterAnim="@android:anim/fade_in"
             app:popUpTo="@id/secondFragment"
             app:popUpToInclusive="true" />
     </fragment>

@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
             insets
         }
-        Toast.makeText(this,"On create ",Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this,"On create ",Toast.LENGTH_SHORT).show()
         binding.btnForm.setOnClickListener {
             val intent= Intent(this,FormActivity::class.java)
             startActivity(intent)
@@ -67,16 +67,16 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this@MainActivity,"You Pressed No..",Toast.LENGTH_SHORT).show()
                     }
                 }
-                val alertDialog = alertDialogBuilder.create()
-                alertDialog.show()
-                val window = alertDialog.window
-                window?.setBackgroundDrawable(AppCompatResources.getDrawable(this,R.drawable.card_background_i))
-                window?.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT)
-                val positiveBtn = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE)
-                positiveBtn.setTextColor(getColor(R.color.white))
-                positiveBtn.textSize = 20f
-                val fontFace = ResourcesCompat.getFont(this,R.font.raleway_font)
-                positiveBtn.setTypeface(fontFace,Typeface.NORMAL)
+            val alertDialog = alertDialogBuilder.create()
+            alertDialog.show()
+            val window = alertDialog.window
+            window?.setBackgroundDrawable(AppCompatResources.getDrawable(this,R.drawable.card_background_i))
+            window?.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT)
+            val positiveBtn = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE)
+            positiveBtn.setTextColor(getColor(R.color.white))
+            positiveBtn.textSize = 20f
+            val fontFace = ResourcesCompat.getFont(this,R.font.raleway_font)
+            positiveBtn.setTypeface(fontFace,Typeface.NORMAL)
         }
         binding.btnFragment.setOnClickListener {
             val fragmentIntent=Intent(this,FragmentActivity::class.java)
@@ -113,28 +113,31 @@ class MainActivity : AppCompatActivity() {
         binding.btnGenerateOtp.setOnClickListener {
             startActivity(Intent(this,ActOtpGenerate::class.java))
         }
+        binding.btnDateTime.setOnClickListener {
+            startActivity(Intent(this,ActDateTime::class.java))
+        }
     }
 
-
-    override fun onStart() {
-        super.onStart()
-        Toast.makeText(this,"On start",Toast.LENGTH_SHORT).show()
-    }
-    override fun onResume() {
-        super.onResume()
-        Toast.makeText(this,"On Resume",Toast.LENGTH_SHORT).show()
-    }
-    override fun onPause() {
-        super.onPause()
-        Toast.makeText(this,"On Pause",Toast.LENGTH_SHORT).show()
-    }
-    override fun onStop() {
-        super.onStop()
-        Toast.makeText(this,"On stop",Toast.LENGTH_SHORT).show()
-    }
-    override fun onDestroy() {
-        super.onDestroy()
-        Toast.makeText(this,"On Destroy",Toast.LENGTH_SHORT).show()
-    }
+//
+//    override fun onStart() {
+//        super.onStart()
+//        Toast.makeText(this,"On start",Toast.LENGTH_SHORT).show()
+//    }
+//    override fun onResume() {
+//        super.onResume()
+//        Toast.makeText(this,"On Resume",Toast.LENGTH_SHORT).show()
+//    }
+//    override fun onPause() {
+//        super.onPause()
+//        Toast.makeText(this,"On Pause",Toast.LENGTH_SHORT).show()
+//    }
+//    override fun onStop() {
+//        super.onStop()
+//        Toast.makeText(this,"On stop",Toast.LENGTH_SHORT).show()
+//    }
+//    override fun onDestroy() {
+//        super.onDestroy()
+//        Toast.makeText(this,"On Destroy",Toast.LENGTH_SHORT).show()
+//    }
 
 }

@@ -38,7 +38,9 @@ class OtpFragment : Fragment() {
             putExtra(Intent.EXTRA_TEXT,"Your OTP for verification is: \n$randomNum")
         }
         startActivity(emailIntent)
-        findNavController().navigate(R.id.action_otpFragment_to_fragEmailIntent)
+        val bundle = Bundle()
+        bundle.putString("otp",randomNum.toString())
+        findNavController().navigate(R.id.action_otpFragment_to_fragEmailIntent,bundle)
     }
     }
 }
