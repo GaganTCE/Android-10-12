@@ -44,8 +44,9 @@ class FragEmailIntent : Fragment() {
             editText.setOnKeyListener { _, keyCode, keyEvent ->
                 if(keyCode == KeyEvent.KEYCODE_DEL && keyEvent.action == KeyEvent.ACTION_DOWN){
                     if(editText.text.isEmpty()){
-                        if(editText != allEts[0])
-                        allEts[index - 1].requestFocus()
+                        if(editText != allEts[0]) {
+                            allEts[index - 1].requestFocus()
+                        }
                     }
                 }
                 false
