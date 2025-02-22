@@ -125,9 +125,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Date Time Act"
         app:layout_constraintTop_toBottomOf="@id/btnGenerateOtp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="60dp"
         android:layout_marginTop="50dp"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnDateTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Recycler Activity"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

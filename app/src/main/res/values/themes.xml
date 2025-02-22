@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.KotlinBasics" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">#FF672A</item>
+        <item name="colorPrimary">#FF672A</item>
         <item name="colorOnPrimary">#7AB5FF</item>
     </style>
 

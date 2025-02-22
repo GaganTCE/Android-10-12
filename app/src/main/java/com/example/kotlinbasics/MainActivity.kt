@@ -116,6 +116,9 @@ class MainActivity : AppCompatActivity() {
         binding.btnDateTime.setOnClickListener {
             startActivity(Intent(this,ActDateTime::class.java))
         }
+        binding.btnRecycler.setOnClickListener {
+            startActivity(Intent(this,RecyclerAct::class.java))
+        }
     }
 
 //
